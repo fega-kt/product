@@ -1,8 +1,11 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import Checkinternet from "./component/Checkinternet";
 import LoginPage from "./component/LoginPage";
 import DashboardHome from "./component/DashboardHome";
+import NotFound from "./component/NotFound";
+
 function App() {
+  let navigate = useNavigate();
   return (
     <>
       <Checkinternet>
@@ -17,8 +20,9 @@ function App() {
           </ul>
         </div>
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/" element={<DashboardHome />} />
+          <Route path="/" element={<DashboardHome navigate={navigate} />} />
+          <Route path="/login" element={<LoginPage navigate={navigate} />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </Checkinternet>
     </>
