@@ -5,7 +5,7 @@ import DashboardHome from "./component/DashboardHome";
 import NotFound from "./component/NotFound";
 
 function App() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <>
       <Checkinternet>
