@@ -1,5 +1,6 @@
 import React from "react";
 import Cookies from 'js-cookie'
+import { Helmet } from 'react-helmet';
 
 class DashboardHome extends React.Component {
   constructor(props) {
@@ -21,12 +22,15 @@ class DashboardHome extends React.Component {
   componentDidUpdate() {
     this.handleCheckToken()
   };
-  componentDidMount() {
+    componentDidMount() {
     this.handleCheckToken()
   };
   render() {
     return (
       <>
+      <Helmet>
+          <title>{ process.env.REACT_APP_TITLE_NAME }</title>
+    </Helmet>
         home
 
       </>

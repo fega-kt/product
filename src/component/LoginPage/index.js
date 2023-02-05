@@ -1,8 +1,7 @@
-import { Button, Card, CardActions, CardContent, Grid, Typography } from "@mui/material";
+import { Button, Card, CardActions, CardContent, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
-// require('dotenv').config()
 import { Helmet } from 'react-helmet';
-
+import './style.scss'
 function LoginPage() {
   console.log(`${process.env.REACT_APP_TITLE_NAME}`, "process")
 
@@ -11,9 +10,13 @@ function LoginPage() {
           <title>{ process.env.REACT_APP_TITLE_NAME }</title>
     </Helmet>
 
-   <Grid item justifyItems="center" container>
-   <Grid item justifyItems="center" md={6} xs={6} >
+   <Grid item id={"mainLoginPage"} container>
+   <Grid item  md={6} xs={6} className="login">
+      <Paper elevation={3}className="paper">
       { process.env.REACT_APP_PROJECT_NAME }
+
+      </Paper>
+
     </Grid>
    </Grid>
   </>
