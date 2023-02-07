@@ -1,46 +1,49 @@
 import { Button, Card, CardActions, CardContent, Grid, InputAdornment, Paper, TextField, Typography } from "@mui/material";
 import React from "react";
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import { makeStyles } from '@material-ui/core/styles';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+// import { makeStyles } from '@mui/core/styles';
 
 import { Helmet } from 'react-helmet';
 import './style.scss'
-const useStyles = makeStyles((theme) => ({
-  margin: {
-    margin: theme.spacing(1),
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   margin: {
+//     margin: theme.spacing(1),
+//   },
+// }));
 function LoginPage() {
   console.log(`${process.env.REACT_APP_TITLE_NAME}`, "process")
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return <>
-   <Helmet>
-          <title>{ process.env.REACT_APP_TITLE_NAME }</title>
+    <Helmet>
+      <title>{process.env.REACT_APP_TITLE_NAME}</title>
     </Helmet>
 
-   <Grid item id={"mainLoginPage"} container>
-   <Grid item  md={4} xs={4}  sm ={6} className="login">
-      <Paper elevation={3}className="paper">
-      { process.env.REACT_APP_PROJECT_NAME }
-      <Grid>
-      <TextField
-        className={classes.margin}
-        id="input-with-icon-textfield"
-        label="TextField"
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <AccountCircle />
-            </InputAdornment>
-          ),
-        }}
-      />
-      </Grid>
-      </Paper>
+    <Grid item id={"mainLoginPage"} container>
+      <Grid item md={3} xs={3} sm={6} className="login" spacing={64}>
+        <Paper elevation={3} className="paper">
+          {process.env.REACT_APP_PROJECT_NAME}
 
+
+          <Grid item md={8} xs={8} sm={6} className="contentPaper">
+            <TextField
+              id="input-with-icon-textfield"
+              label="TextField"
+              fullWidth
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <AccountCircle />
+                  </InputAdornment>
+                ),
+              }}
+              variant="standard"
+            />
+          </Grid>
+        </Paper>
+
+      </Grid>
     </Grid>
-   </Grid>
   </>
 }
 

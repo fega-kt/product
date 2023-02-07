@@ -1,12 +1,22 @@
 #mainLoginPage {
     justify-content: center;
     height: 100vh;
+
     .login {
         position: relative;
         margin: auto;
     };
     .paper {
         height: 70vh;
+        .contentPaper{
+            position: relative;
+            margin: auto;
+        }
+
+    }
+
+    .centerPage {
+        justify-content: center;
     }
 
 }
