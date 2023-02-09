@@ -1,22 +1,26 @@
 #mainLoginPage {
     justify-content: center;
     height: 100vh;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 
     .login {
         position: relative;
         margin: auto;
-        .nameWeb{
+
+        .nameWeb {
             color: #1877f2
-        };
-        .description{
+        }
+
+        ;
+
+        .description {
             font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
             font-size: 28px;
             font-weight: normal;
             line-height: 32px;
         }
-        
+
     }
 
     ;
@@ -34,19 +38,22 @@
 
     .paper {
         height: 50vh;
-        padding-top: 20px;
+        padding: 20px;
 
         .contentPaper {
             position: relative;
             margin: auto;
             margin-top: 20px;
-            .viewPassword{
+
+            .viewPassword {
                 cursor: pointer;
             }
-            .btnLogin{
+
+            .btnLogin {
                 background-color: #1877f2;
             }
-            .btnCreateNewAccount{
+
+            .btnCreateNewAccount {
                 background-color: #42b72a;
             }
         }
@@ -65,39 +72,49 @@
             border-radius: 4px;
             box-shadow: 0 12px 20px -10px rgb(0 188 212 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(0 188 212 / 20%);
         }
+
         @media only screen and (max-width: 1200px) {
             .contentLogin {
                 font-size: 40px;
             }
         }
+
         @media only screen and (max-width: 992px) {
             .contentLogin {
                 font-size: 30px;
             }
         }
+
         @media only screen and (max-width: 768px) {
             .contentLogin {
                 font-size: 25px;
             }
         }
+
         @media only screen and (max-width: 600px) {
             .contentLogin {
                 font-size: 20px;
             }
-            .description{
+
+            .description {
                 font-size: 14px;
             }
-            .btnLogin{
+
+            .btnLogin {
                 font-size: 9px;
             }
-            .btnCreateNewAccount{
+
+            .btnCreateNewAccount {
                 font-size: 8px;
             }
-            .rightSidebar, .leftSidebar{
+
+            .rightSidebar,
+            .leftSidebar {
                 display: none;
             }
         }
-        .forgottenpassword{
+
+        .forgottenpassword {
             position: relative;
             margin: auto;
             text-align: center;
@@ -105,7 +122,39 @@
             cursor: pointer;
             margin-top: 30px;
         }
-       
+
+    }
+
+
+    @media only screen and (max-height: 1200px) {
+        .paper {
+            height: 60vh;
+        }
+    }
+
+    @media only screen and (max-height: 700px) {
+        .paper {
+            height: 65vh;
+        }
+    }
+
+
+    @media only screen and (max-height: 600px) {
+        .paper {
+            height: 70vh;
+        }
+    }
+
+    @media only screen and (max-height: 500px) {
+        .paper {
+            height: 80vh;
+        }
+    }
+
+    @media only screen and (max-height: 400px) {
+        .paper {
+            height: 100vh;
+        }
     }
 
     .centerPage {

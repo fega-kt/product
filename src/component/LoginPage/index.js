@@ -49,23 +49,23 @@ function LoginPage() {
 
     </Helmet>
 
-    <Grid item id={"mainLoginPage"} container >
-      <Grid item md={3} xs={3} sm={1} className="leftSidebar" zeroMinWidth>
+    <Grid item={true} id={"mainLoginPage"} container >
+      <Grid item={true} md={3} xs={3} sm={1} className="leftSidebar" zeroMinWidth>
 
       </Grid>
-      <Grid item md={6} xs={6} sm={10} className="login" container >
-      <Grid item md={6} xs={6} sm={6} className="" >
-        <h1 className="nameWeb">{handleGetTitle("nameWeb", language, true)}</h1>
-        <h1 className="description">{handleGetTitle("descriptionWeb", language, true)}</h1>
+      <Grid item={true} md={6} xs={6} sm={10} className="login" container >
+        <Grid item={true} md={6} xs={6} sm={6} className="" >
+          <h1 className="nameWeb">{handleGetTitle("nameWeb", language, true)}</h1>
+          <h1 className="description">{handleGetTitle("descriptionWeb", language, true)}</h1>
 
-      </Grid>
-        <Grid item md={6} xs={6} sm={6} className="" >
+        </Grid>
+        <Grid item={true} md={6} xs={6} sm={6} className="" >
           <Paper elevation={3} className="paper">
-            {/* <Grid item className="contentLogin">
+            {/* <Grid item={true}className="contentLogin">
             {handleGetTitle("loginAccount", language, true)}
           </Grid> */}
 
-            <Grid item md={8} xs={8} sm={6} className="contentPaper">
+            <Grid item={true} md={8} xs={8} sm={6} className="contentPaper">
               <TextField
                 label={handleGetTitle("account", language, true)}
                 fullWidth
@@ -81,7 +81,7 @@ function LoginPage() {
               />
             </Grid>
 
-            <Grid item md={8} xs={8} sm={6} className="contentPaper">
+            <Grid item={true} md={8} xs={8} sm={6} className="contentPaper">
               <TextField
                 label={handleGetTitle("password", language, true)}
                 fullWidth
@@ -108,16 +108,16 @@ function LoginPage() {
                 id="outlined-search"
               />
             </Grid>
-            <Grid item md={10} xs={10} sm={6} className="contentPaper">
+            <Grid item={true} md={10} xs={10} sm={6} className="contentPaper">
               <Stack spacing={1} direction="row">
                 <Button variant="contained" fullWidth size="large" className="btnLogin">{handleGetTitle("login", language, true)}</Button>
               </Stack>
             </Grid>
-            <Grid item md={10} xs={10} sm={6} className="forgottenpassword">
-            {handleGetTitle("forgottenPassword", language, true)} {" ?"}
-            <hr/>
+            <Grid item={true} md={10} xs={10} sm={6} className="forgottenpassword">
+              {handleGetTitle("forgottenPassword", language, true)} {" ?"}
+              <hr />
             </Grid>
-            <Grid  md={8} xs={8} sm={6}  className="contentPaper">
+            <Grid md={8} xs={8} sm={6} className="contentPaper">
               <Stack spacing={1} direction="row">
                 <Button variant="contained" fullWidth size="large" className="btnCreateNewAccount">{handleGetTitle("createNewAccount", language, true)}</Button>
               </Stack>
@@ -127,7 +127,7 @@ function LoginPage() {
 
 
       </Grid>
-      <Grid item md={3} xs={3} sm={1} className="rightSidebar" zeroMinWidth>
+      <Grid item={true} md={3} xs={3} sm={1} className="rightSidebar" zeroMinWidth>
         <Grid >
 
           <Radio {...controlProps('VI')} />{handleGetTitle("vietnamese", language, true)}
@@ -157,6 +157,7 @@ const mapStateToProps = createStructuredSelector({
 
 function mapDispatchToProps(dispatch) {
   return {
+    dispatch,
     // mergeData: data => dispatch(mergeData(data)),
     // onAddExecutiveDocument: (query, cb, types) => {
     //   dispatch(addExecutiveDocument(query, cb, types));
