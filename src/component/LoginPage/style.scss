@@ -1,17 +1,29 @@
 #mainLoginPage {
     justify-content: center;
     height: 100vh;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 
     .login {
         position: relative;
         margin: auto;
+        .nameWeb{
+            color: #1877f2
+        };
+        .description{
+            font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+            font-size: 28px;
+            font-weight: normal;
+            line-height: 32px;
+        }
+        
     }
 
     ;
 
 
 
-    .loginLanguage {
+    .rightSidebar {
         justify-content: center;
         display: flex;
         margin-top: 20px
@@ -21,19 +33,29 @@
 
 
     .paper {
-        height: 70vh;
+        height: 50vh;
         padding-top: 20px;
 
         .contentPaper {
             position: relative;
             margin: auto;
+            margin-top: 20px;
+            .viewPassword{
+                cursor: pointer;
+            }
+            .btnLogin{
+                background-color: #1877f2;
+            }
+            .btnCreateNewAccount{
+                background-color: #42b72a;
+            }
         }
 
         .contentLogin {
             position: relative;
             margin: auto;
             text-align: center;
-            font-size: 45px;
+            font-size: 38px;
             font-family: 'Times New Roman', Times, serif;
             font-weight: bold;
             background: linear-gradient(60deg, #26c6da, #00acc1);
@@ -43,12 +65,47 @@
             border-radius: 4px;
             box-shadow: 0 12px 20px -10px rgb(0 188 212 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(0 188 212 / 20%);
         }
-
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 1200px) {
             .contentLogin {
-                font-size: 28px;
+                font-size: 40px;
             }
         }
+        @media only screen and (max-width: 992px) {
+            .contentLogin {
+                font-size: 30px;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .contentLogin {
+                font-size: 25px;
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            .contentLogin {
+                font-size: 20px;
+            }
+            .description{
+                font-size: 14px;
+            }
+            .btnLogin{
+                font-size: 9px;
+            }
+            .btnCreateNewAccount{
+                font-size: 8px;
+            }
+            .rightSidebar, .leftSidebar{
+                display: none;
+            }
+        }
+        .forgottenpassword{
+            position: relative;
+            margin: auto;
+            text-align: center;
+            color: #1877f2;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+       
     }
 
     .centerPage {
