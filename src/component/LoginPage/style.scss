@@ -1,163 +1,27 @@
-#mainLoginPage {
-    justify-content: center;
-    height: 100vh;
+// new
+.main {
+
     background: rgb(34, 193, 195);
     background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    // background: rgb(2, 0, 36);
+    // background: -moz-radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(38, 121, 9, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    // background: -webkit-radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(38, 121, 9, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    // background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(38, 121, 9, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#00d4ff", GradientType=1);
+    width: 100vw !important;
+    height: 100vh !important;
 
-    .login {
-        position: relative;
-        margin: auto;
 
-        .nameWeb {
-            color: #1877f2
-        }
 
-        ;
 
-        .description {
-            font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
-            font-size: 28px;
-            font-weight: normal;
-            line-height: 32px;
-        }
 
+    .content,
+    .language,
+    .description,
+    .contentPaper,
+    .forgottenpassword {
+        margin: 0 auto !important; // căn giữa 
+        text-align: center;
     }
 
-    ;
-
-
-
-    .rightSidebar {
-        justify-content: center;
-        display: flex;
-        margin-top: 20px
-    }
-
-    ;
-
-
-    .paper {
-        height: 50vh;
-        padding: 20px;
-
-        .contentPaper {
-            position: relative;
-            margin: auto;
-            margin-top: 20px;
-
-            .viewPassword {
-                cursor: pointer;
-            }
-
-            .btnLogin {
-                background-color: #1877f2;
-            }
-
-            .btnCreateNewAccount {
-                background-color: #42b72a;
-            }
-        }
-
-        .contentLogin {
-            position: relative;
-            margin: auto;
-            text-align: center;
-            font-size: 38px;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: bold;
-            background: linear-gradient(60deg, #26c6da, #00acc1);
-            padding: 20px;
-            width: 80%;
-            color: rgba(255, 255, 255, 0.959);
-            border-radius: 4px;
-            box-shadow: 0 12px 20px -10px rgb(0 188 212 / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(0 188 212 / 20%);
-        }
-
-        @media only screen and (max-width: 1200px) {
-            .contentLogin {
-                font-size: 40px;
-            }
-        }
-
-        @media only screen and (max-width: 992px) {
-            .contentLogin {
-                font-size: 30px;
-            }
-        }
-
-        @media only screen and (max-width: 768px) {
-            .contentLogin {
-                font-size: 25px;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-            .contentLogin {
-                font-size: 20px;
-            }
-
-            .description {
-                font-size: 14px;
-            }
-
-            .btnLogin {
-                font-size: 9px;
-            }
-
-            .btnCreateNewAccount {
-                font-size: 8px;
-            }
-
-            .rightSidebar,
-            .leftSidebar {
-                display: none;
-            }
-        }
-
-        .forgottenpassword {
-            position: relative;
-            margin: auto;
-            text-align: center;
-            color: #1877f2;
-            cursor: pointer;
-            margin-top: 30px;
-        }
-
-    }
-
-
-    @media only screen and (max-height: 1200px) {
-        .paper {
-            height: 60vh;
-        }
-    }
-
-    @media only screen and (max-height: 700px) {
-        .paper {
-            height: 65vh;
-        }
-    }
-
-
-    @media only screen and (max-height: 600px) {
-        .paper {
-            height: 70vh;
-        }
-    }
-
-    @media only screen and (max-height: 500px) {
-        .paper {
-            height: 80vh;
-        }
-    }
-
-    @media only screen and (max-height: 400px) {
-        .paper {
-            height: 100vh;
-        }
-    }
-
-    .centerPage {
-        justify-content: center;
-    }
 }

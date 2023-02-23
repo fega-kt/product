@@ -1,4 +1,4 @@
-import { Button, Grid, InputAdornment, Paper, Stack, TextField } from "@mui/material";
+import { Button, Container, Grid, Hidden, InputAdornment, Paper, Stack, TextField } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import LockIcon from '@mui/icons-material/Lock';
@@ -49,95 +49,90 @@ function LoginPage() {
 
     </Helmet>
 
-    <Grid item={true} id={"mainLoginPage"} container >
-      <Grid item={true} md={3} xs={3} sm={1} className="leftSidebar" zeroMinWidth>
+    <Container maxWidth={false} className="main">
+      <Grid container spacing={2} className="contentLogin">
+        <Hidden mdDown>
+          <Grid item xs={12} sm={8} md={4} className="description">
+            {/* <Paper style={{ height: "100vh" }}> */}
+            <Grid >
+              <h1 className="nameWeb">{handleGetTitle("nameWeb", language, true)}</h1>
+              <h1 className="description">{handleGetTitle("descriptionWeb", language, true)}</h1>
 
-      </Grid>
-      <Grid item={true} md={6} xs={6} sm={10} className="login" container >
-        <Grid item={true} md={6} xs={6} sm={6} className="" >
-          <h1 className="nameWeb">{handleGetTitle("nameWeb", language, true)}</h1>
-          <h1 className="description">{handleGetTitle("descriptionWeb", language, true)}</h1>
-
-        </Grid>
-        <Grid item={true} md={6} xs={6} sm={6} className="" >
-          <Paper elevation={3} className="paper">
-            {/* <Grid item={true}className="contentLogin">
-            {handleGetTitle("loginAccount", language, true)}
-          </Grid> */}
-
-            <Grid item={true} md={8} xs={8} sm={6} className="contentPaper">
-              <TextField
-                label={handleGetTitle("account", language, true)}
-                fullWidth
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="end">
-                      <AccountCircle />
-                    </InputAdornment>
-                  ),
-                }}
-                id="outlined-search"
-                type="search"
-              />
             </Grid>
+            {/* </Paper> */}
+          </Grid>
+        </Hidden>
 
-            <Grid item={true} md={8} xs={8} sm={6} className="contentPaper">
-              <TextField
-                label={handleGetTitle("password", language, true)}
-                fullWidth
-                type={view ? "text" : "password"}
-                InputProps={{
-                  startAdornment: (
-                    <>
+        <Grid item xs={12} sm={8} md={4} className="content">
+          <Paper >
+            {/* login nè */}
+            <Grid >
+              <Grid item md={10} xs={8} sm={8} className="contentPaper">
+                <TextField
+                  label={handleGetTitle("account", language, true)}
+                  fullWidth
+                  InputProps={{
+                    startAdornment: (
                       <InputAdornment position="end">
-                        <LockIcon />
+                        <AccountCircle />
                       </InputAdornment>
-                    </>
+                    ),
+                  }}
+                  id="outlined-search"
+                  type="search"
+                />
+              </Grid>
 
-                  ),
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      {
-                        view ? <VisibilityIcon className="viewPassword" onClick={() => setView(!view)} /> :
-                          <VisibilityOffIcon className="viewPassword" onClick={() => setView(!view)} />
-                      }
+              <Grid item md={10} xs={8} sm={8} className="contentPaper">
+                <TextField
+                  label={handleGetTitle("password", language, true)}
+                  fullWidth
+                  type={view ? "text" : "password"}
+                  InputProps={{
+                    startAdornment: (
+                      <>
+                        <InputAdornment position="end">
+                          <LockIcon />
+                        </InputAdornment>
+                      </>
 
-                    </InputAdornment>
-                  )
-                }}
-                id="outlined-search"
-              />
-            </Grid>
-            <Grid item={true} md={10} xs={10} sm={6} className="contentPaper">
-              <Stack spacing={1} direction="row">
-                <Button variant="contained" fullWidth size="large" className="btnLogin">{handleGetTitle("login", language, true)}</Button>
-              </Stack>
-            </Grid>
-            <Grid item={true} md={10} xs={10} sm={6} className="forgottenpassword">
-              {handleGetTitle("forgottenPassword", language, true)} {" ?"}
-              <hr />
-            </Grid>
-            <Grid md={8} xs={8} sm={6} className="contentPaper">
-              <Stack spacing={1} direction="row">
-                <Button variant="contained" fullWidth size="large" className="btnCreateNewAccount">{handleGetTitle("createNewAccount", language, true)}</Button>
-              </Stack>
+                    ),
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        {
+                          view ? <VisibilityIcon className="viewPassword" onClick={() => setView(!view)} /> :
+                            <VisibilityOffIcon className="viewPassword" onClick={() => setView(!view)} />
+                        }
+
+                      </InputAdornment>
+                    )
+                  }}
+                  id="outlined-search"
+                />
+              </Grid>
+              <Grid item md={10} xs={10} sm={8} className="contentPaper">
+                <Stack spacing={1} direction="row">
+                  <Button variant="contained" fullWidth size="large" className="btnLogin">{handleGetTitle("login", language, true)}</Button>
+                </Stack>
+              </Grid>
+              <Grid item md={10} xs={10} sm={8} className="forgottenpassword">
+                {handleGetTitle("forgottenPassword", language, true)} {" ?"}
+                <hr />
+              </Grid>
+              <Grid item md={8} xs={8} sm={8} className="contentPaper">
+                <Stack spacing={1} direction="row">
+                  <Button variant="contained" fullWidth size="large" className="btnCreateNewAccount">{handleGetTitle("createNewAccount", language, true)}</Button>
+                </Stack>
+              </Grid>
             </Grid>
           </Paper>
         </Grid>
-
-
-      </Grid>
-      <Grid item={true} md={3} xs={3} sm={1} className="rightSidebar" zeroMinWidth>
-        <Grid >
-
+        <Grid item xs={12} sm={8} md={4} className="language">
           <Radio {...controlProps('VI')} />{handleGetTitle("vietnamese", language, true)}
           <Radio {...controlProps('ENG')} color="success" />{handleGetTitle("english", language, true)}
-
         </Grid>
-
       </Grid>
-
-    </Grid>
+    </Container>
   </>
 }
 
