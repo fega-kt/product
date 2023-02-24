@@ -66,7 +66,11 @@ function LoginPage() {
         <Grid item xs={12} sm={8} md={4} className="content">
           <Paper >
             {/* login nè */}
-            <Grid >
+
+            <Grid className="mainContent">
+              <Grid item md={10} xs={8} sm={8} className="contentPaper">
+                {handleGetTitle("loginAccount", language, true)}
+              </Grid>
               <Grid item md={10} xs={8} sm={8} className="contentPaper">
                 <TextField
                   label={handleGetTitle("account", language, true)}
