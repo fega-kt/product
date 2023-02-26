@@ -1,3 +1,0 @@
-export const MERGE_DATA = 'app/LOGINPAGE/MERGE_DATA';
-export const LOGINPAGE_LOGIN = 'app/LOGINPAGE/LOGIN';
-
