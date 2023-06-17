@@ -8,13 +8,13 @@
  */
 
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
-// import DashboardHome from 'containers/DashboardHome';
 import Checkinternet from 'containers/Checkinternet';
+import DashboardHome from 'containers/DashboardHome';
 
 import LoginPage from 'containers/LoginPage';
-import NotFoundPage from 'containers/NotFoundPage';
+// import NotFoundPage from 'containers/NotFoundPage';
 
 
 import GlobalStyle from '../../global-styles';
@@ -29,7 +29,7 @@ export default function App() {
       <Switch>
 
         <Checkinternet>
-          {/* <Route path="/" exact component={DashboardHome} /> */}
+          <Route path="/" exact component={DashboardHome} />
           <Route path="/login" component={LoginPage} />
           {/* <Route path='*' component={NotFoundPage} /> */}
         </Checkinternet>

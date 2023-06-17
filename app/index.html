@@ -12,17 +12,24 @@
   <meta name="mobile-web-app-capable" content="yes">
 
   <link rel="icon" href="/favicon.ico" />
-  <title>React.js Boilerplate</title>
+  <title>my app</title>
+  <style>
+    #app {
+      background: rgb(2, 0, 36);
+      background: -moz-radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(38, 121, 9, 1) 35%, rgba(0, 212, 255, 1) 100%);
+      background: -webkit-radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(38, 121, 9, 1) 35%, rgba(0, 212, 255, 1) 100%);
+      background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(38, 121, 9, 1) 35%, rgba(0, 212, 255, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#00d4ff", GradientType=1);
+
+    }
+  </style>
 </head>
 
 <body>
   <!-- Display a message if JS has been disabled on the browser. -->
-  <noscript>If you're seeing this message, that means
-    <strong>JavaScript has been disabled on your browser</strong>, please
-    <strong>enable JS</strong> to make this app work.</noscript>
 
   <!-- The app hooks into this div -->
-  <div id="app"></div>
+  <div id="app" style="height: 100%; width: 100%;margin: 0;padding: 0;overflow: auto;"></div>
   <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically injects all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this file. Don't add any assets here! (Check out webpack.dev.babel.js and webpack.prod.babel.js if you want to know more) -->
 </body>
 
